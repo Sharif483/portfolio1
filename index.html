@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shaik Sharif | Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #0d0d0d;
+        color: #f2f2f2;
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: #111;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #00ffe1;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li a {
+        position: relative;
+        text-decoration: none;
+        color: #f2f2f2;
+        font-weight: 500;
+        padding: 5px 0;
+        transition: color 0.3s ease;
+      }
+
+      /* Animated underline effect */
+      nav ul li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background: #00ffe1;
+        transition: width 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #00ffe1;
+        text-shadow: 0 0 5px #00ffe1, 0 0 10px #00ffe1;
+      }
+
+      nav ul li a:hover::after {
+        width: 100%;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 100px 20px;
+        background: linear-gradient(145deg, #111, #1a1a1a);
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+
+      .hero h1 span {
+        color: #00ffe1;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #ccc;
+      }
+
+      .cta-button {
+        padding: 12px 30px;
+        background: #00ffe1;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 25px;
+        transition: background 0.3s;
+      }
+
+      .cta-button:hover {
+        background: #00ccaa;
+      }
+
+      .section {
+        padding: 60px 20px;
+        max-width: 900px;
+        margin: auto;
+        animation: fadeIn 1s ease-in-out forwards;
+        opacity: 0;
+      }
+
+      .section h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #00ffe1;
+      }
+
+      .skills-grid,
+      .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .skill-card,
+      .project-card {
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 10px;
+        min-width: 200px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .skill-card:hover,
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 10px #00ffe1;
+      }
+
+      a {
+        color: #00ffe1;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #111;
+        color: #999;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+        nav ul {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Shaik Sharif Portfolio</div>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero" id="hero">
+      <h1>Hi, I'm <span>Shaik Sharif</span></h1>
+      <p>Fresher Software Developer | Python | Web Development</p>
+      <a href="#contact" class="cta-button">Get in Touch</a>
+      <a href="Shaik_Sharif_Resume.pdf" class="cta-button" download
+        >Download Resume</a
+      >
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I am a motivated and detail-oriented Computer Science undergraduate with
+        hands-on experience in Python, web development, and virtual internships.
+        Passionate about building practical solutions, I’ve completed
+        internships in Data Science, Cybersecurity, Android, and Python
+        development.
+      </p>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Internships & Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Eduskills Virtual Internships</h3>
+          <br />
+          <ul style="text-align: left">
+            <li>
+              <strong>Data Science Master Internship :</strong>
+              Gained hands-on experience in data preprocessing, visualization
+              using Matplotlib and Seaborn, and developed basic ML models using
+              Scikit-learn.
+            </li>
+            <br />
+            <li>
+              <strong>Cybersecurity Internship :</strong>
+              Explored network security, ethical hacking basics, and practiced
+              on platforms like TryHackMe to strengthen foundational cyber
+              defense skills.
+            </li>
+            <br />
+            <li>
+              <strong>Android Development Internship :</strong>
+              Learned Android app development using Java and XML, and built
+              simple apps to understand layouts, activities, and intents.
+            </li>
+            <br />
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <h3>Elewayte – Python Internship</h3>
+          <br />
+          <p>
+            Worked on real-world Python projects focusing on backend scripting,
+            file handling, and basic automation. Also gained exposure to APIs
+            and best practices in Python coding.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p><strong>📞</strong> +91 8555963669</p>
+      <p>
+        <strong>📧</strong>
+        <a href="mailto:Sharifshaik2030@gmail.com">Sharifshaik2030@gmail.com</a>
+      </p>
+      <p>
+        <strong>🔗</strong>
+        <a
+          href="https://www.linkedin.com/in/sharif-shaik-76a753341"
+          target="_blank"
+          >LinkedIn Profile</a
+        >
+      </p>
+      <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/Sharif483" target="_blank"
+          ><i class="fab fa-github"></i>View Repositories</a
+        >
+      </p>
+      <p>
+        <strong>Address :</strong> Indra Nagar, Hanuman Junction, 521105, India
+      </p>
+    </section>
+
+    <footer>&copy; 2025 Shaik Sharif. All rights reserved.</footer>
+  </body>
+</html>
